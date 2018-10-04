@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".nc8005"></activity>
+        <activity android:name=".nc8005" />
+        <activity
+            android:name=".nc80052"
+            android:label="@string/title_activity_nc80052"></activity>
     </application>
 
 </manifest>
