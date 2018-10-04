@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".djb7559" />
+        <activity android:name=".djb7559_2"></activity>
     </application>
 
 </manifest>

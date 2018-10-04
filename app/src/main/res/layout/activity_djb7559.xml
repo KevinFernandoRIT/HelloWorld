@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Hello World"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".djb7559">
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="123dp"
+        android:layout_height="70dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Page 1"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="248dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go to page 2"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="362dp" />
+</android.support.constraint.ConstraintLayout>
