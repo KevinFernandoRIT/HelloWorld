@@ -16,10 +16,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Kevins_Activity" />
-        <activity
-            android:name=".kkf4497_primary"
-            android:label="@string/title_activity_kkf4497_primary" >
+        <activity android:name=".kkf4497_primary">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,6 +24,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".kkf4497_secondary">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_main_screen"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_main_screen"
+            android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
