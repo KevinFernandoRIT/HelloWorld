@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Hello World</string>
+    <string name="title_activity_kkf4497_primary">kkf4497_primary</string>
+
+    <string name="title_activity_main_screen">activity_main_screen</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
