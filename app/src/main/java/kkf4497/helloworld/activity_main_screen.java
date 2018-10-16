@@ -94,7 +94,7 @@ public class activity_main_screen extends Activity {
     public void paintClicked(View view) {
         System.out.println("BUTTON PRESSEDEDEDEDEDD");
         //use chosen color
-//        if(view!=currPaint) {
+        if(view!=currPaint) {
             //update color
             ImageButton imgView = (ImageButton)view;
             String color = imgView.getTag().toString();
@@ -103,7 +103,7 @@ public class activity_main_screen extends Activity {
 //            currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint));
             currPaint=(ImageButton)view;
 
-//        }
+        }
     }
 
 
@@ -131,6 +131,7 @@ public class activity_main_screen extends Activity {
 
         drawView = (DrawingView)findViewById(R.id.drawing);
         LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_colors);
+        System.out.println(paintLayout);
         currPaint = (ImageButton)paintLayout.getChildAt(0);
 //        currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
 

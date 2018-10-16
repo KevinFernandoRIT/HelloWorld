@@ -18,13 +18,11 @@ public class DrawingView extends android.view.View {
     //drawing and canvas paint
     private Paint drawPaint, canvasPaint;
     //initial color
-    private int paintColor = 0xFF660000;
+    private int paintColor = 000000;
     //canvas
     private Canvas drawCanvas;
     //canvas bitmap
     private Bitmap canvasBitmap;
-
-    private String currPaint = "#FF66FF00";
 
 
     public DrawingView(Context context, AttributeSet attrs){
@@ -52,8 +50,9 @@ public class DrawingView extends android.view.View {
     public void setColor(String newColor){
     //set color
         invalidate();
-        System.out.println(newColor);
         paintColor = Color.parseColor(newColor);
+        System.out.println(newColor);
+        System.out.println(paintColor);
         drawPaint.setColor(paintColor);
     }
 
