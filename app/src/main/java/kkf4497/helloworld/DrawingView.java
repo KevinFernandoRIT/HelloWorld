@@ -51,8 +51,6 @@ public class DrawingView extends android.view.View {
     //set color
         invalidate();
         paintColor = Color.parseColor(newColor);
-        System.out.println(newColor);
-        System.out.println(paintColor);
         drawPaint.setColor(paintColor);
     }
 

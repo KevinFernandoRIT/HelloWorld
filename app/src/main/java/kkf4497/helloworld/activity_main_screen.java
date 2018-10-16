@@ -92,7 +92,6 @@ public class activity_main_screen extends Activity {
     private ImageButton currPaint;
 
     public void paintClicked(View view) {
-        System.out.println("BUTTON PRESSEDEDEDEDEDD");
         //use chosen color
         if(view!=currPaint) {
             //update color
