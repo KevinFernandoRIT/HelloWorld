@@ -1,12 +1,15 @@
 package kkf4497.helloworld;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.util.AttributeSet;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class DrawingView extends android.view.View {
 
@@ -20,6 +23,8 @@ public class DrawingView extends android.view.View {
     private Canvas drawCanvas;
     //canvas bitmap
     private Bitmap canvasBitmap;
+
+    private String currPaint = "#FF66FF00";
 
 
     public DrawingView(Context context, AttributeSet attrs){
@@ -40,6 +45,21 @@ public class DrawingView extends android.view.View {
 
         canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
+
+
+
+
+    public void setColor(String newColor){
+    //set color
+        invalidate();
+        System.out.println(newColor);
+        paintColor = Color.parseColor(newColor);
+        drawPaint.setColor(paintColor);
+    }
+
+
+
+
 
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {

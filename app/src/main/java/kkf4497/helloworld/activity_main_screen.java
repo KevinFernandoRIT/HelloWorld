@@ -3,10 +3,13 @@ package kkf4497.helloworld;
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -83,15 +86,60 @@ public class activity_main_screen extends Activity {
 //        }
 //    };
 
+
+
+    private DrawingView drawView;
+    private ImageButton currPaint;
+
+    public void paintClicked(View view) {
+        System.out.println("BUTTON PRESSEDEDEDEDEDD");
+        //use chosen color
+//        if(view!=currPaint) {
+            //update color
+            ImageButton imgView = (ImageButton)view;
+            String color = imgView.getTag().toString();
+            drawView.setColor(color);
+//            imgView.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
+//            currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint));
+            currPaint=(ImageButton)view;
+
+//        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+
         setContentView(R.layout.activity_main_screen);
+
+
+
+
+        drawView = (DrawingView)findViewById(R.id.drawing);
+        LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_colors);
+        currPaint = (ImageButton)paintLayout.getChildAt(0);
+//        currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
+
+
+
 
 //        mVisible = true;
 //        mControlsView = findViewById(R.id.fullscreen_content_controls);
-        mContentView = findViewById(R.id.fullscreen_content);
+//        mContentView = findViewById(R.id.fullscreen_content);
 
 
         // Set up the user interaction to manually show or hide the system UI.

@@ -76,7 +76,7 @@
 
 
             <kkf4497.helloworld.DrawingView
-                android:id="@+id/fullscreen_content"
+                android:id="@+id/drawing"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:layout_marginBottom="3dp"
@@ -101,139 +101,33 @@
                 android:layout_weight="1">
 
                 <LinearLayout
+                    android:id="@+id/paint_colors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
                     <ImageButton
-                        android:id="@+id/imageButton6"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
+                        android:background="#FF66FF00"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:src="@mipmap/ic_launcher"
+                        android:tag="#FF66FF00" />
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:adjustViewBounds="true"
+                        android:background="#00FF0000"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
+                        android:onClick="paintClicked"
+                        android:src="@mipmap/ic_launcher"
+                        android:tag="#00FF0000" />
 
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <Button
-                        android:id="@+id/Brush"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
 
                 </LinearLayout>
             </ScrollView>
