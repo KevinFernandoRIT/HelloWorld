@@ -74,13 +74,26 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <ImageView
+
+            <kkf4497.helloworld.DrawingView
+                android:id="@+id/fullscreen_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF" />
+
+
+            <!--<ImageView
                 android:id="@+id/fullscreen_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@android:drawable/ic_menu_report_image"
-                android:visibility="visible" />
+                android:visibility="visible" />-->
 
             <ScrollView
                 android:layout_width="wrap_content"
