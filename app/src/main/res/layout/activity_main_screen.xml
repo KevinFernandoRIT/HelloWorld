@@ -46,6 +46,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:text="SAVE"
                         tools:text="SAVE" />
 
                     <TextView
@@ -53,7 +54,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="FRANK DRAWS - filename" />
+                        android:gravity="center"
+                        android:text="@string/title"
+                        android:textAppearance="@style/TextAppearance.AppCompat"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="24sp" />
 
                     <Button
                         android:id="@+id/new_file"
@@ -61,6 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:text="NEW FILE"
                         tools:text="NEW FILE" />
 
                 </LinearLayout>
@@ -71,156 +77,250 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
+
+            <kkf4497.helloworld.DrawingView
+                android:id="@+id/drawing"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="3dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="3dp"
+                android:layout_weight="1"
+                android:background="#FFFFFFFF" />
+
+
+            <!--<ImageView
                 android:id="@+id/fullscreen_content"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:src="@android:drawable/ic_menu_report_image"
-                android:visibility="visible" />
+                android:visibility="visible" />-->
 
             <ScrollView
-                android:layout_width="wrap_content"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
 
                 <LinearLayout
+                    android:id="@+id/paint_colors"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFFFFF"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:src="@mipmap/eraser"
+                        android:tag="#FFFFFF" />
 
                     <ImageButton
-                        android:id="@+id/imageButton6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#F44336"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#F44336" />
 
                     <ImageButton
-                        android:id="@+id/imageButton5"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#E91E63"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
-
-                    <Button
-                        android:id="@+id/Brush"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Button" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#E91E63" />
 
                     <ImageButton
-                        android:id="@+id/imageButton8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#9C27B0"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#9C27B0" />
 
                     <ImageButton
-                        android:id="@+id/imageButton10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#673AB7"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#673AB7" />
 
                     <ImageButton
-                        android:id="@+id/imageButton2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#3F51B5"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#3F51B5" />
 
                     <ImageButton
-                        android:id="@+id/imageButton11"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#2196F3"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#2196F3" />
 
                     <ImageButton
-                        android:id="@+id/imageButton3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#03A9F4"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#03A9F4" />
 
                     <ImageButton
-                        android:id="@+id/imageButton4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#00BCD4"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#00BCD4" />
 
                     <ImageButton
-                        android:id="@+id/imageButton9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#009688"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
-
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp" />
+                        android:onClick="paintClicked"
+                        android:tag="#009688" />
 
                     <ImageButton
-                        android:id="@+id/imageButton7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
                         android:adjustViewBounds="true"
+                        android:background="#4CAF50"
+                        android:contentDescription="@string/paint"
                         android:cropToPadding="false"
-                        android:src="@mipmap/ic_launcher" />
+                        android:onClick="paintClicked"
+                        android:tag="#4CAF50" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#8BC34A"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#8BC34A" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#CDDC39"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#CDDC39" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFEB3B"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#FFEB3B" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FFC107"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#FFC107" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FF9800"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#FF9800" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#FF5722"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#FF5722" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#795548"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#795548" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="5dp"
+                        android:adjustViewBounds="true"
+                        android:background="#000000"
+                        android:contentDescription="@string/paint"
+                        android:cropToPadding="false"
+                        android:onClick="paintClicked"
+                        android:tag="#000000" />
 
                 </LinearLayout>
             </ScrollView>
