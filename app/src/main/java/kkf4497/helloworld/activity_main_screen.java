@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -114,7 +115,7 @@ public class activity_main_screen extends Activity {
 
 
 
-
+    private Button new_file;
 
 
 
@@ -125,7 +126,13 @@ public class activity_main_screen extends Activity {
 
         setContentView(R.layout.activity_main_screen);
 
-
+        new_file = findViewById(R.id.new_file);
+        new_file.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                System.out.println("NEW FILE BUTTON WAS PRESSED REEEEEEEEEEEEEEEE");
+                drawView.reset();
+            }
+        });
 
 
         drawView = (DrawingView)findViewById(R.id.drawing);

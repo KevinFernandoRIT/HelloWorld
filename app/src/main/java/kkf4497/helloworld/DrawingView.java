@@ -31,7 +31,7 @@ public class DrawingView extends android.view.View {
     }
 
 
-    private void setupDrawing(){
+    public void setupDrawing(){
         drawPath = new Path();
         drawPaint = new Paint();
         drawPaint.setColor(paintColor);
@@ -45,8 +45,6 @@ public class DrawingView extends android.view.View {
     }
 
 
-
-
     public void setColor(String newColor){
     //set color
         invalidate();
@@ -55,6 +53,9 @@ public class DrawingView extends android.view.View {
     }
 
 
+    public void reset() {
+        drawCanvas.drawColor(Color.WHITE);
+    }
 
 
 
