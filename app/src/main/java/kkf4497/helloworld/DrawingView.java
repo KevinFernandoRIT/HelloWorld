@@ -31,7 +31,7 @@ public class DrawingView extends android.view.View {
     }
 
 
-    public void setupDrawing(){
+    private void setupDrawing(){
         drawPath = new Path();
         drawPaint = new Paint();
         drawPaint.setColor(paintColor);
@@ -43,6 +43,11 @@ public class DrawingView extends android.view.View {
 
         canvasPaint = new Paint(Paint.DITHER_FLAG);
     }
+
+    public void changeStrokeSize(float size) {
+        drawPaint.setStrokeWidth(size);
+    }
+
 
 
     public void setColor(String newColor){

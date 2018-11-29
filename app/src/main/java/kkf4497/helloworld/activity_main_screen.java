@@ -6,9 +6,12 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
@@ -116,6 +119,7 @@ public class activity_main_screen extends Activity {
 
 
     private Button new_file;
+    private EditText brushSize;
 
 
 
@@ -133,11 +137,39 @@ public class activity_main_screen extends Activity {
             }
         });
 
+        brushSize = findViewById(R.id.brushSize);
+        brushSize.setText("20");
+        brushSize.addTextChangedListener(new TextWatcher() {
+            int hold;
+            CharSequence old;
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                old = s;
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(s.length() > 0){
+                    hold = Integer.parseInt(s.toString());
+                    if (hold > 1)
+                        drawView.changeStrokeSize(hold);
+                }
+            }
+        });
+
+
 
         drawView = (DrawingView)findViewById(R.id.drawing);
         LinearLayout paintLayout = (LinearLayout)findViewById(R.id.paint_colors);
         System.out.println(paintLayout);
-        currPaint = (ImageButton)paintLayout.getChildAt(0);
+        currPaint = (ImageButton)paintLayout.getChildAt(2);
+        paintClicked(currPaint);
+
 //        currPaint.setImageDrawable(getResources().getDrawable(R.drawable.paint_pressed));
 
 
