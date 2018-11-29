@@ -129,7 +129,6 @@ public class activity_main_screen extends Activity {
         new_file = findViewById(R.id.new_file);
         new_file.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                System.out.println("NEW FILE BUTTON WAS PRESSED REEEEEEEEEEEEEEEE");
                 drawView.reset();
             }
         });
